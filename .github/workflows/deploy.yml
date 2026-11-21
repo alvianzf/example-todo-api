@@ -27,5 +27,5 @@ jobs:
           ssh-keyscan "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
       - name: Run the deploy script on the server
         run: |
-          ssh "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" "~/deploy-flask.sh"
+          sudo ssh "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" "~/deploy-flask.sh"
      
